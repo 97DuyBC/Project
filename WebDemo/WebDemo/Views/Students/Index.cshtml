@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_layout.cshtml";
+}
+
+<title>Thông tin</title>
+<body>
+
+<div class="panel-body">
+    <div>
+        <h1>Thông tin sinh viên</h1>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered table-hover">
+            <thead id="content">
+                <tr>
+                    <th>ID</th>
+                    <th>MSV</th>
+                    <th>Họ và tên</th>
+                    <th>Ngày sinh</th>
+                    <th>Mã khoa</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>15021322</td>
+                    <td>Bùi Công Duy</td>
+                    <td>1/1/2000</td>
+                    <td>IT_1234</td>
+                </tr>
+            </thead>
+            <script src="~/scripts/Students/index.js"></script>
+            <tbody id="listStudents">
+                <tr >
+                    <td>${Id}</td>
+                    <td>${codeSV}</td>
+                    <td>${fullName}</td>
+                    <td>${birthday}</td>
+                    <td>${codeCN}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+ </div>
+</body>
+
