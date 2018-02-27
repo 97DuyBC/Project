@@ -15,5 +15,16 @@ namespace WebDemo.Business.Students
                 return db.Students.ToList();
             }                
         }
+
+        public Boolean saveStudent(Student st)
+        {
+            using (Data db = new Data())
+            {
+                db.Students.Add(st);
+                db.SaveChanges();
+                return true;
+            }
+            return false;
+        }
     }
 }

@@ -2,7 +2,7 @@
     getStudent();
     function getStudent() {
         var reqData = {}
-        var a=0;
+        //var a=0;
         $.ajax
         ({
             url: '/Students/jsonListStudent',
@@ -16,9 +16,15 @@
             }
             }).done(function(rs)
             {
-                var b = 1;
+                //var b = 1;
                 $('#listStudents').tmpl(rs.Data).appendTo('#content');
-            })
-        
+            })        
     }
 })
+
+//Return date
+function GetDateTime(jsonDate) {
+    //var c = 1;
+    var value = new Date(parseInt(jsonDate.substr(6)));
+    return value.getMonth() + 1 + "/" + value.getDate() + "/" + value.getFullYear();
+}

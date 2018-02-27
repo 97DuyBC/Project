@@ -15,6 +15,10 @@ namespace WebDemo.Controllers
         {
             return View();
         }
+        public ActionResult Add()
+        {
+            return View();
+        }
         new StudentsDAO StDao = new StudentsDAO(); 
 
         [HttpPost]
@@ -24,6 +28,19 @@ namespace WebDemo.Controllers
             return Json(new {
                 Data = StDao.getAllStudents(),
         });
+        }
+
+        public ActionResult jsonSaveStudent(Student st)
+        {
+            String mes;
+            if(StDao.saveStudent(st)== true)
+            {
+                mes = "Success";
+            }
+            else{
+                mes = "Fall";
+            }
+            return Json(new{ mes = mes});
         }
     }
 }
