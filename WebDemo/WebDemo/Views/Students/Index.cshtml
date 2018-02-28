@@ -6,14 +6,14 @@
 
 <title>Thông tin</title>
 <body>
-
+<header><script src="~/scripts/Students/index.js"></script></header>
 <div class="panel-body">
     <div>
         <h1>Thông tin sinh viên</h1>
     </div>
     <div class="table-responsive">
         <table class="table table-striped table-bordered table-hover">
-            <thead id="content">
+            <thead>
                 <tr>
                     <th>ID</th>
                     <th>MSV</th>
@@ -22,24 +22,26 @@
                     <th>Mã khoa</th>
                 </tr>
                 <tr>
-                    <td></td>
+                    <td>0</td>
                     <td>15021322</td>
                     <td>Bùi Công Duy</td>
                     <td>1/1/2000</td>
                     <td>IT_1234</td>
                 </tr>
             </thead>
-            <script src="~/scripts/Students/index.js"></script>
-            <tbody id="listStudents">
-                <tr >
-                    <td>${Id}</td>
-                    <td>${codeSV}</td>
-                    <td>${fullName}</td>
-                    <td>${birthday}</td>
-                    <td>${codeCN}</td>
-                </tr>
-            </tbody>
+            <tbody id="content"></tbody>
+            
+            <script id="listStudents" type="text/html">
+                        <tr>
+                            <td>${Id}</td>
+                            <td>${codeSV}</td>
+                            <td>${fullName}</td>
+                            <td>${GetDateTime(birthday)}</td>
+                            <td>${codeCN}</td>
+                        </tr>
+            </script>
         </table>
+        <a href="/Students/Add"><button class="fg-button" style="height: 40px; width: 75px">Add</button></a>
     </div>
  </div>
 </body>

@@ -232,7 +232,9 @@
     <Content Include="scripts\jquery-ui.min.js" />
     <Content Include="scripts\jquery.fileDownload.js" />
     <Content Include="scripts\jquery.tmpl.js" />
+    <Content Include="scripts\Students\Add.js" />
     <Content Include="scripts\Students\index.js" />
+    <Content Include="Views\Students\Add.cshtml" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
