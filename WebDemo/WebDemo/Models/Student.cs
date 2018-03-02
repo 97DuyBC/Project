@@ -8,6 +8,7 @@ namespace WebDemo.Models
 
     public partial class Student
     {
+    
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 

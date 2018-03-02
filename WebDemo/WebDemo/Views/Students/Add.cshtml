@@ -3,28 +3,31 @@
     ViewBag.Title = "Add";
     Layout = "~/Views/Shared/_layout.cshtml";
 }
+<title>Thêm thông tin SV</title>
 <body>
     <header>
-        <script></script>
+        <script src="~/scripts/Students/Add.js"></script>
     </header>
     <div>
         <h1>Thêm thông tin Sinh viên</h1>
     </div>
     <div style="width: 40%">
+        <label>Nhập họ và tên:</label><br />
         <input type="text" class="form-control" placeholder="Họ và tên" id="ip_name"></input><br/> <br />
-        <input type="text" class="form-control" placeholder="MSV" style="width: 40%" id=" ip_MSV"></input><br /> <br />
+        <label>Nhập mã sinh viên:</label><br />
+        <input type="text" class="form-control" placeholder="MSV" style="width: 40%" id="ip_MSV"></input><br /> <br />
         <label>Ngày sinh: </label>
         <input type="date" class="form-control" style="width: 40%" id="ip_birthday"></input><br /><br />
         <label>Chọn mã khoa:</label><br /><br />
         <select class="form-control" style="width: 25%" name="MK" id="ip_MK">
-            <option value="IT_1">IT_1</option>
-            <option value="IT_2">IT_2</option>
-            <option value="IT_3">IT_3</option>
-            <option value="IT_4">IT_4</option>
+            <option value="A">IT_1</option>
+            <option value="B">IT_2</option>
+            <option value="C">IT_3</option>
+            <option value="D">IT_4</option>
         </select>
         <br />
         <br />
-        <input type="submit" class="btn btn-success" value="Lưu"></input>
+        <input type="submit" class="btn btn-success" value="Lưu" onclick="Add()"></input>
     </div>
 
 </body>

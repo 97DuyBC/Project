@@ -30,17 +30,23 @@ namespace WebDemo.Controllers
         });
         }
 
-        public ActionResult jsonSaveStudent(Student st)
+        public ActionResult jsonSaveStudent(StudentModel stm)
         {
-            String mes;
-            if(StDao.saveStudent(st)== true)
+            try
             {
-                mes = "Success";
+                if (stm == null)
+                {
+                    return Json(new{Message ="Fall"});
+                }
+
+                StDao.saveStudent(stm);
+
+                return Json(new{Message = "SUCCESS"});
             }
-            else{
-                mes = "Fall";
+            catch (Exception ex)
+            {
+                return Json(new { Message = ex.Message });
             }
-            return Json(new{ mes = mes});
         }
     }
 }

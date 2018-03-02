@@ -249,6 +249,7 @@
     <Compile Include="Models\GV.cs" />
     <Compile Include="Models\Specialized.cs" />
     <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\StudentModel.cs" />
     <Compile Include="Models\Subject.cs" />
     <Compile Include="Models\sysdiagram.cs" />
     <Compile Include="Models\User.cs" />

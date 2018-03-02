@@ -16,15 +16,20 @@ namespace WebDemo.Business.Students
             }                
         }
 
-        public Boolean saveStudent(Student st)
+        public void saveStudent(StudentModel stm)
         {
+           Student st = new Student();
+            st.birthday = stm.birthday;
+            st.codeCN = stm.codeCN;
+            st.codeSV = stm.codeSV;
+            st.fullName = stm.fullName;
+            st.Id = stm.Id;
             using (Data db = new Data())
             {
-                db.Students.Add(st);
-                db.SaveChanges();
-                return true;
+                    db.Students.Add(st);
+                    db.SaveChanges();
             }
-            return false;
+
         }
     }
 }
